@@ -34,23 +34,23 @@ void dijkstra(int N, int start, int end){
 	while (!d_heap.empty()){
 		node top = d_heap.top();
 		d_heap.pop();
-		
+
 		// make sure we don't visit the same vertex again
 		if (visited[top.vertex])
 			continue;
-		
+
 		visited[top.vertex] = true;
-		
+
 		int u = top.vertex;
 		for (int i = 0; i < graph[u].size(); i++){
 			int v = graph[u][i].vertex;
 			int cost = graph[u][i].cost;
 			if ( dist[u] + cost < dist[v]){
 				dist[v] = dist[u] + cost ;
-				d_heap.push(graph[u][i]);	// push this node (vertex, cost) into the heap (See Dijkstra Algorithm)
+				d_heap.push((node){v, dist[v]});	// push this node (vertex, cost) into the heap (See Dijkstra Algorithm)
 			}
 		}
-	
+
 	}
 }
 
