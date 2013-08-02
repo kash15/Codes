@@ -1,7 +1,7 @@
 /**********KASHISH BABBAR**********/
 /*
   Problem - SPOJ FPOLICE
-	Algorithm - Dijkstra
+	Algorithm - Dijkstra (can also be done using DP ) (similar to SPOJ problem FISHER)
 	Instead of only having a single node as the state, we take
 	node and time as one state and then apply dijkstra.
 	risk is the weight between the states.
